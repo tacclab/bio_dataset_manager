@@ -1,0 +1,20 @@
+> Valid
+Cc1scc2c1N(C(=O)CN1CCN(C)CC1)c1ccccc1NC2=O.Cl
+> Valid
+CN(C)CCC=C1c2ccccc2COc2ccc(CC(=O)O)cc21.Cl
+> Valid
+CC1(C)SC2C(N3C(=O)C(c4ccccc4)NC3(C)C)C(=O)N2C1C(=O)[O-].[K+]
+> Valid
+Cl.O=C(O)c1cn(-c2ccc(F)cc2)c2cc(N3CCNCC3)c(F)cc2c1=O
+> Valid
+NCC1OC(OC2C(N)CC(N)C(OC3OC(CO)C(O)C(N)C3O)C2O)C(N)CC1O
+> Valid
+CON=C(C(=O)NC1C(=O)N2C(C(=O)O)=C(C[N+]3(C)CCCC3)CSC12)c1csc(N)n1.[Cl-]
+> Valid
+CON=C(C(=O)NC1C(=O)N2C(C(=O)O)=C(C[N+]3(C)CCCC3)CSC12)c1csc(N)n1.[Cl-]
+> Invalid
+CON=C(C(=O)NC1C((C)CCCC3)CSC12)c1csc(N)n1.[Cl-]
+> Invalid
+CON=C(C(=O)NC1C((C)CCCC3)CSC12)c1csc(N)n1.[Cl-]
+> Invalid
+CON=C(C(=O)NC1C((C)CCCC3)CSC12)c1csc(N)n1.[Cl-]

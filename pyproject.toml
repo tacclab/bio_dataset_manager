@@ -1,0 +1,47 @@
+[project]
+name = "bio_data_manager"
+dynamic = ["version"]  # This relies on git tags for versioning
+authors = [
+    { name = "Fabio Bove", email = "fabio.bove.dr@gmail.com" }
+]
+description = "A small package to manage biological data."
+readme = "README.md"
+license = { file = "LICENSE" }
+keywords = ["bioinformatics", "data", "manipulation"]
+
+# Specify the required dependencies with correct versions
+dependencies = [
+    "rdkit",  # Verify if rdkit has a specific version you want to target
+    "numpy>=1.0.0,<2.0.0",
+    "pandas~=2.2.2",
+    "tqdm~=4.66.4",
+    "scipy~=1.14.0",
+    "biopython~=1.84",
+    "viennarna~=2.6.4"
+]
+
+# Define optional dependencies like testing and CUDA support
+[project.optional-dependencies]
+test = [
+    "pytest==7.2.1",
+    "pytest-cov==5.0.0",
+    "pytest-mock==3.14.0",
+    "pytest-md==0.2.0"
+]
+
+[project.urls]
+Homepage = "https://github.com/fabiobove-dr/bio_data_manager"
+Issues = "https://github.com/fabiobove-dr/bio_data_manager/issues"
+
+# Setuptools git versioning configuration
+[tool.setuptools-git-versioning]
+enabled = true
+
+[build-system]
+requires = ["setuptools>=61.0", "setuptools-git-versioning>=2.0,<3", "wheel"]
+build-backend = "setuptools.build_meta"
+
+# TODO: Fix this is not working: Invoke the postinstall script manually
+# Also as it's a lot of data maybe is better to use trigger it manually
+# [project.scripts]
+# script_name = "bio_data_manager.postinstall:install_torch"
