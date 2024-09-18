@@ -7,8 +7,7 @@
    - Eugenio Bertolini | - </figcaption><br> 
 </figure>
 <hr>
-Bio Data Manager is a Python project designed for managing and processing, bio-sequence data (DNA, PROTEINS, SMILES).<br>
-This allows an easy encoding of sequences into tensors that can be then used for AI computation and complex models implementations.
+Bio Data Manager is a Python project designed for managing and processing bio-sequence data, including DNA, proteins, and SMILES strings. This tool facilitates the encoding of these sequences into tensors, which can then be used for AI computations and complex model implementations.
 
 ## Project Structure
 - `bio_data_manager/`: Contains core modules for bioinformatics sequence processing and management.
