@@ -89,8 +89,7 @@ def test_create_dataloader(bio_dataloader_fixture, bio_dataset_fixture, sequence
 
     # Check if the DataLoader has the correct batch size
     for batch in dataloader_instance:
-        packed_inputs, labels = batch
-        y_real, lengths = bio_dataloader_fixture(packed_inputs, batch_first=True)
+        y_real, lengths = bio_dataloader_fixture.process_batch(batch, batch_first=True)
         assert len(lengths) == dataloader_instance.batch_size
         break
 

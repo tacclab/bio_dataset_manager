@@ -1,8 +1,8 @@
 import torch
+from src.bio_dataset_manager.bio_dataset import BioDataset
+from torch.nn.utils.rnn import pad_packed_sequence
 from torch.utils.data import DataLoader
 from torch.utils.data import random_split
-
-from src.bio_dataset_manager.bio_dataset import BioDataset
 
 
 class BioDataloader:
@@ -88,3 +88,8 @@ class BioDataloader:
         self.training_dataset = training_dataset
         self.validation_dataset = validation_dataset
         return training_dataset, validation_dataset
+
+    def process_batch(self, batch: tuple, batch_first: bool = True) -> (torch.Tensor, list):
+        packed_inputs, _ = batch
+        y_real, lengths = pad_packed_sequence(packed_inputs, batch_first=True)
+        return y_real, lengths

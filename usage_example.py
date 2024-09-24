@@ -1,11 +1,10 @@
 import time
 
-from tqdm import tqdm
-
 import src.bio_commons as bio_commons
 from src import BioDataloader
 from src import BioDataset
 from src import DnaSequence, ProteinSequence, SmilesSequence
+from tqdm import tqdm
 
 
 def demo(sequence_info: DnaSequence or ProteinSequence or SmilesSequence, dataset_folder: str = None):
@@ -39,6 +38,8 @@ def demo(sequence_info: DnaSequence or ProteinSequence or SmilesSequence, datase
     for epoch in range(epochs):
         with tqdm(total=len(dataloader.training_dataloader), desc=f"Epoch {epoch + 1}/{epochs}", unit="batch") as pbar:
             for batch in dataloader.training_dataloader:
+                y_real, lengths = dataloader.process_batch(batch)
+                print(f"Real sequences: {len(lengths)}, Real sequences Lengths: {lengths}")
                 time.sleep(0.1)
                 pbar.update(1)
                 pbar.set_postfix(
