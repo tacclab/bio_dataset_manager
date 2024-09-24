@@ -11,9 +11,9 @@ keywords = ["bioinformatics", "data", "manipulation"]
 
 # Specify the required dependencies with correct versions
 dependencies = [
-    "rdkit",  # Verify if rdkit has a specific version you want to target
+    "rdkit",  # Verify if rdkit has a specific version
     "numpy>=1.0.0,<2.0.0",
-    "pandas~=2.2.2",
+    "pandas==2.2.3",
     "tqdm~=4.66.4",
     "scipy~=1.14.0",
     "biopython~=1.84",
