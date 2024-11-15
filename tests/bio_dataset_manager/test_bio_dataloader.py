@@ -106,6 +106,7 @@ def test_create_dataloader(bio_dataloader_fixture, bio_dataset_fixture, sequence
     ],
     indirect=["bio_sequences_fixture", "sequence_info_fixture"]
 )
+@pytest.mark.skipif(not torch.cuda.is_available(), reason="CUDA is not available")
 def test_dataloader_with_gpu_option(bio_dataloader_fixture, bio_dataset_fixture, sequence_info_fixture,
                                     bio_sequences_fixture, window_size, use_gpu):
     # Set the GPU option dynamically

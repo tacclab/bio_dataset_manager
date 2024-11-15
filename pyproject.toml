@@ -11,13 +11,15 @@ keywords = ["bioinformatics", "data", "manipulation"]
 
 # Specify the required dependencies with correct versions
 dependencies = [
-    "rdkit",  # Verify if rdkit has a specific version
+    "rdkit",
     "numpy>=1.0.0,<2.0.0",
     "pandas==2.2.3",
     "tqdm~=4.66.4",
     "scipy~=1.14.0",
     "biopython~=1.84",
-    "viennarna~=2.6.4"
+    "viennarna~=2.6.4",
+    "rdkit==2024.3.5",
+    "torch==2.3.1",  # Default to the CPU version for simplicity
 ]
 
 # Define optional dependencies like testing and CUDA support
@@ -26,7 +28,12 @@ test = [
     "pytest==7.2.1",
     "pytest-cov==5.0.0",
     "pytest-mock==3.14.0",
-    "pytest-md==0.2.0"
+    "pytest-md==0.2.0",
+]
+cuda = [
+    "torch==2.3.1+cu118",
+    "torchvision==0.15.2+cu118",
+    "torchaudio==2.3.1+cu118",
 ]
 
 [project.urls]
@@ -40,8 +47,3 @@ enabled = true
 [build-system]
 requires = ["setuptools>=61.0", "setuptools-git-versioning>=2.0,<3", "wheel"]
 build-backend = "setuptools.build_meta"
-
-# TODO: Fix this is not working: Invoke the postinstall script manually
-# Also as it's a lot of data maybe is better to use trigger it manually
-# [project.scripts]
-# script_name = "bio_data_manager.postinstall:install_torch"
