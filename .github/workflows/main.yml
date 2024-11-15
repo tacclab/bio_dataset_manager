@@ -28,7 +28,7 @@ jobs:
           python -m pip install --upgrade pip
 
           # Install dependencies from pyproject.toml (if using pip)
-          pip install .  # This will install all dependencies in pyproject.toml
+          pip install -e .  
 
       - name: Run tests
         run: pytest --cov --cov-report=xml
