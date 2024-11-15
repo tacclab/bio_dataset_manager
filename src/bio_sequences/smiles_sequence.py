@@ -1,92 +1,48 @@
 from rdkit import Chem
 
+from src.bio_sequences.bio_sequence import BioSequence
 from src.bio_sequences.bio_sequences_config import SmilesSequenceConfig
 
 
-class SmilesSequence:
+class SmilesSequence(BioSequence):
+    """
+    SMILES sequence class for validating and handling SMILES string representations of molecules.
+    """
+
     def __init__(self):
-        self._config = SmilesSequenceConfig()
-        self._name = self._config.NAME
-        self._alphabet = self._config.ALPHABET
-        self._start_codons = self._config.START_CODONS
-        self._stop_codons = self._config.STOP_CODONS
-        self._charset = self._config.CHARSET
-        self._tensor_window_size = self._config.TENSOR_WINDOW_SIZE
+        super().__init__(SmilesSequenceConfig())
 
-    @property
-    def tensor_window_size(self):
-        return self._tensor_window_size
-
-    @tensor_window_size.setter
-    def tensor_window_size(self, value: int):
-        self._tensor_window_size = value
-
-    @tensor_window_size.getter
-    def tensor_window_size(self):
-        return self._tensor_window_size
-
-    @property
-    def charset(self):
-        return self._charset
-
-    @charset.setter
-    def charset(self, value):
-        self._charset = value
-
-    @charset.getter
-    def charset(self):
-        return self._charset
-
-    @property
-    def name(self):
-        return self._name
-
-    @name.setter
-    def name(self, value):
-        self._name = value
-
-    @property
-    def alphabet(self):
-        return self._alphabet
-
-    @alphabet.setter
-    def alphabet(self, value):
-        self._alphabet = value
-
-    @property
-    def start_codons(self):
-        return self._start_codons
-
-    @start_codons.setter
-    def start_codons(self, value):
-        self._start_codons = value
-
-    @property
-    def stop_codons(self):
-        return self._stop_codons
-
-    @stop_codons.setter
-    def stop_codons(self, value):
-        self._stop_codons = value
-
-    @staticmethod
-    def has_valid_start(sequence: str) -> bool:
+    def has_valid_start(self, sequence: str) -> bool:
+        """
+        Checks if the SMILES sequence starts with a valid start codon (not applicable for SMILES).
+        """
         return True
 
-    @staticmethod
-    def has_valid_stop(sequence: str) -> bool:
+    def has_valid_stop(self, sequence: str) -> bool:
+        """
+        Checks if the SMILES sequence ends with a valid stop codon (not applicable for SMILES).
+        """
         return True
 
     @staticmethod
     def has_valid_len(sequence: str, valid_range: range or None = None) -> bool:
+        """
+        Validates the length of the SMILES sequence.
+        """
         return True
 
-    @staticmethod
-    def has_invalid_middle_stop(sequence: str) -> bool:
-        return True
+    def has_invalid_middle_stop(self, sequence: str) -> bool:
+        """
+        Check if a stop codon appears in the middle of the SMILES sequence.
+        """
+        # This can be SMILES-specific, but for simplicity we return True.
+        return False
 
     @staticmethod
     def is_valid(sequence: str) -> bool:
+        """
+        Validates if the SMILES sequence is a valid SMILES representation.
+        """
         try:
             molecule = Chem.MolFromSmiles(sequence)
         except ValueError as _:

@@ -2,6 +2,16 @@ from dataclasses import dataclass
 
 
 @dataclass
+class BioSequenceConfig:
+    NAME: str = "BIO-SEQUENCE"
+    START_CODONS: list = "C",
+    STOP_CODONS: list = "T"
+    CHARSET: list = "C", "A", "R", "S", "E", "T"
+    ALPHABET: str = ''.join(CHARSET)
+    TENSOR_WINDOW_SIZE: int = 4
+
+
+@dataclass
 class ProteinSequenceConfig:
     NAME = "PROTEIN"
     CHARSET = [
