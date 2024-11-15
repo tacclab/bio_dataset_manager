@@ -1,3 +1,4 @@
+import torch.cuda
 from pytest import fixture
 
 from src.bio_dataset_manager.bio_dataloader import BioDataloader
@@ -7,7 +8,7 @@ from src.bio_dataset_manager.bio_dataset import BioDataset
 @fixture
 def dataloader_params():
     return {
-        'use_gpu': True,
+        'use_gpu': True if torch.cuda.is_available() else False,
         'batch_size': 3,
         'shuffle': True,
         'collate_fn': BioDataset.collate_fn,
