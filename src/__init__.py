@@ -6,11 +6,10 @@ from .bio_sequences.protein_sequence import ProteinSequence
 from .bio_sequences.smiles_sequence import SmilesSequence
 
 __all__ = [
-    "bio_commons",
     "BioSequencesUtils",
     "DnaSequence",
     "ProteinSequence",
     "SmilesSequence",
     "BioDataloader",
-    "BioDataset"
+    "BioDataset",
 ]
