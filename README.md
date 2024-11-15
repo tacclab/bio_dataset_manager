@@ -2,11 +2,16 @@
 ## Bio Data Manager
 <figure>
   <img src="icon.png" alt="description" style="width:300px; height:auto;">
-  <figcaption>© Authors:<br>
-   - Fabio Bove | fabio.bove.dr@gmail.com<br> 
-   - Eugenio Bertolini | - </figcaption><br> 
+
 </figure>
 
+[![Coverage](https://codecov.io/github/tacclab/bio_dataset_manager/coverage.svg?branch=main)](https://codecov.io/gh/tacclab/bio_dataset_manager) 
+[![Powered by TaccLab](https://img.shields.io/badge/powered%20by-TaccLab-orange.svg?style=flat&colorA=E1523D&colorB=007D8A)](https://numfocus.org) 
+[![License](https://img.shields.io/github/license/tacclab/bio_dataset_manager.svg)](https://github.com/tacclab/bio_dataset_manager/blob/main/LICENSE)
+
+© Authors:<br>
+   - Fabio Bove | fabio.bove.dr@gmail.com<br> 
+   - Eugenio Bertolini |  <br> 
 <hr>
 Bio Data Manager is a Python project designed for managing and processing bio-sequence data, including DNA, proteins, and SMILES strings. This tool facilitates the encoding of these sequences into tensors, which can then be used for AI computations and complex model implementations.
 
