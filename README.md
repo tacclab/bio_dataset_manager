@@ -16,10 +16,16 @@ Bio Data Manager is a Python project designed for managing and processing bio-se
 
 
 ## Usage
-1. Install it as a library 
-   ```bash
-   pip install git+ssh://git@github.com/tacclab/bio_data_manager.git@0.0.1
-   ```
+1. Install it as a library
+   - Using CPU:
+      ```bash
+      pip install git+ssh://git@github.com/tacclab/bio_data_manager.git@0.0.1
+      ```
+   - Using CUDA:
+      ```bash
+      pip install git+ssh://git@github.com/tacclab/bio_data_manager.git@0.0.1[cuda] -f https://download.pytorch.org/whl/torch_stable.html
+      ```
+
 2. Examples of the code can be found in the `usage_examples.py` file.
 
 ## Contributing

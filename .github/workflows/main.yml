@@ -3,8 +3,9 @@ name: Run tests and upload coverage
 on:
   push:
     branches:
-      - main  
+      - main
       - develop
+      - features/*
 
 jobs:
   test:
@@ -20,15 +21,15 @@ jobs:
       - name: Set up Python
         uses: actions/setup-python@v4
         with:
-          python-version: "3.10"  
+          python-version: "3.10"
 
       - name: Install dependencies (pip)
         run: |
-          # Upgrade pip to avoid any issues
           python -m pip install --upgrade pip
-
-          # Install dependencies from pyproject.toml (if using pip)
-          pip install -e .  
+          # Install main dependencies
+          pip install -e .
+          # Install testing dependencies explicitly
+          pip install .[test]
 
       - name: Run tests
         run: pytest --cov --cov-report=xml
