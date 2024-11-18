@@ -1,10 +1,9 @@
 import time
 
-import src.bio_commons as bio_commons
-from src import BioDataloader
-from src import BioDataset
-from src import DnaSequence, ProteinSequence, SmilesSequence
 from tqdm import tqdm
+
+from bio_dataset_manager import BioDataset, BioDataloader
+from bio_sequences import DnaSequence, ProteinSequence, SmilesSequence
 
 
 def demo(sequence_info: DnaSequence or ProteinSequence or SmilesSequence, dataset_folder: str = None):
@@ -56,5 +55,3 @@ if __name__ == "__main__":
     demo(ProteinSequence(), "tests/bio_test_samples/protein/")
     print("\nUsage example: SMILES\n")
     demo(SmilesSequence(), "tests/bio_test_samples/smiles/")
-    print("\nUsage example: bio_commons\n")
-    print(bio_commons.round_stat(0.2222225, 4))
