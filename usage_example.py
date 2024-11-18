@@ -18,7 +18,6 @@ def demo(sequence_info: DnaSequence or ProteinSequence or SmilesSequence, datase
         sequence_info=sequence_info,
         sequences=None,
     )
-    # print(dataset.sequences)
 
     # Example usage for DnaSequences loaded from a list
     dataloader = BioDataloader(
@@ -29,8 +28,6 @@ def demo(sequence_info: DnaSequence or ProteinSequence or SmilesSequence, datase
         split_ratio=0.5,
         use_gpu=True
     )
-    # print(dataloader.training_dataloader)
-    # print(dataloader.validation_dataloader)
 
     # Training loop example
     epochs = 5

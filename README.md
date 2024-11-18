@@ -6,7 +6,8 @@
 
 <hr>
 
-[![Coverage](https://codecov.io/github/tacclab/bio_dataset_manager/coverage.svg?branch=main)](https://codecov.io/gh/tacclab/bio_dataset_manager)
+[![Coverage](https://codecov.io/github/tacclab/bio_dataset_manager/coverage.svg?branch=main)](https://codecov.io/gh/tacclab/bio_dataset_manager) 
+[![PyPI Latest Release](https://img.shields.io/pypi/v/bio_dataset_manager.svg)](https://pypi.org/project/bio_dataset_manager/)
 ![Unit Tests](https://github.com/tacclab/bio_dataset_manager/actions/workflows/main.yml/badge.svg)<br>
 [![Powered by TaccLab](https://img.shields.io/badge/powered%20by-TaccLab-orange.svg?style=flat&colorA=E1523D&colorB=007D8A)](https://tacclab.org)<br> 
 [![License](https://img.shields.io/github/license/tacclab/bio_dataset_manager.svg)](https://github.com/tacclab/bio_dataset_manager/blob/main/LICENSE)<br>
@@ -34,11 +35,13 @@ Bio Data Manager is a Python project designed for managing and processing bio-se
 1. Install it as a library
    - Using `CPU`:
       ```bash
-      pip install git+ssh://git@github.com/tacclab/bio_data_manager.git@0.0.1
+      pip install bio-dataset-manager
+      # pip install git+ssh://git@github.com/tacclab/bio_data_manager.git@0.0.1
       ```
    - Using `CUDA`:
       ```bash
-      pip install git+ssh://git@github.com/tacclab/bio_data_manager.git@0.0.1[cuda] -f https://download.pytorch.org/whl/torch_stable.html
+      pip install bio-dataset-manager[cuda]
+      # pip install git+ssh://git@github.com/tacclab/bio_data_manager.git@0.0.1[cuda] -f https://download.pytorch.org/whl/torch_stable.html
       ```
 2. Examples of the code can be found in the `usage_examples.py` file.
 ```python
