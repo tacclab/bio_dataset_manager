@@ -1,5 +1,5 @@
 [project]
-name = "bio_data_manager"
+name = "bio_dataset_manager"
 dynamic = ["version"]  # This relies on git tags for versioning
 authors = [
     { name = "Fabio Bove", email = "fabio.bove.dr@gmail.com" }
@@ -35,8 +35,8 @@ cuda = [
 ]
 
 [project.urls]
-Homepage = "https://github.com/fabiobove-dr/bio_data_manager"
-Issues = "https://github.com/fabiobove-dr/bio_data_manager/issues"
+Homepage = "https://github.com/fabiobove-dr/bio_dataset_manager"
+Issues = "https://github.com/fabiobove-dr/bio_dataset_manager/issues"
 
 # Setuptools git versioning configuration
 [tool.setuptools-git-versioning]
