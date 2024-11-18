@@ -8,7 +8,7 @@
 
 [![Coverage](https://codecov.io/github/tacclab/bio_dataset_manager/coverage.svg?branch=main)](https://codecov.io/gh/tacclab/bio_dataset_manager)
 ![Unit Tests](https://github.com/tacclab/bio_dataset_manager/actions/workflows/main.yml/badge.svg)<br>
-[![Powered by TaccLab](https://img.shields.io/badge/powered%20by-TaccLab-orange.svg?style=flat&colorA=E1523D&colorB=007D8A)](https://numfocus.org)<br> 
+[![Powered by TaccLab](https://img.shields.io/badge/powered%20by-TaccLab-orange.svg?style=flat&colorA=E1523D&colorB=007D8A)](https://tacclab.org)<br> 
 [![License](https://img.shields.io/github/license/tacclab/bio_dataset_manager.svg)](https://github.com/tacclab/bio_dataset_manager/blob/main/LICENSE)<br>
 
 ## Authors:
@@ -23,6 +23,7 @@ Bio Data Manager is a Python project designed for managing and processing bio-se
 
 ## Project Structure
 <hr>
+
 - `bio_data_manager/`: Contains core modules for bioinformatics sequence processing and management.
 - `bio_sequences/`: Handles various operations related to biological sequences such as DNA and protein.
 
