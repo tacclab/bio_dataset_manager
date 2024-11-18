@@ -20,7 +20,7 @@ jobs:
 
     - name: Install Dependencies
       run: |
-        python -m pip install --upgrade pip setuptools wheel build
+        python -m pip install --upgrade pip setuptools wheel build twine
 
     - name: Extract Version from Tag
       id: get_version
