@@ -1,5 +1,5 @@
 [project]
-name = "bio_data_manager"
+name = "bio_dataset_manager"
 dynamic = ["version"]  # This relies on git tags for versioning
 authors = [
     { name = "Fabio Bove", email = "fabio.bove.dr@gmail.com" }
@@ -25,7 +25,7 @@ dependencies = [
 # Define optional dependencies like testing and CUDA support
 [project.optional-dependencies]
 test = [
-    "pytest==7.2.1",
+    "pytest==7.3.2",
     "pytest-cov==5.0.0",
     "pytest-mock==3.14.0",
     "pytest-md==0.2.0",
@@ -35,8 +35,8 @@ cuda = [
 ]
 
 [project.urls]
-Homepage = "https://github.com/fabiobove-dr/bio_data_manager"
-Issues = "https://github.com/fabiobove-dr/bio_data_manager/issues"
+Homepage = "https://github.com/fabiobove-dr/bio_dataset_manager"
+Issues = "https://github.com/fabiobove-dr/bio_dataset_manager/issues"
 
 # Setuptools git versioning configuration
 [tool.setuptools-git-versioning]
