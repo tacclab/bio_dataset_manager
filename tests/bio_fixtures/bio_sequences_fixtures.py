@@ -1,10 +1,10 @@
 from Bio import SeqIO
 from pytest import fixture
 
-from src.bio_sequences.bio_sequences_utils import BioSequencesUtils
-from src.bio_sequences.dna_sequence import DnaSequence
-from src.bio_sequences.protein_sequence import ProteinSequence
-from src.bio_sequences.smiles_sequence import SmilesSequence
+from bio_sequences.bio_sequences_utils import BioSequencesUtils
+from bio_sequences.dna_sequence import DnaSequence
+from bio_sequences.protein_sequence import ProteinSequence
+from bio_sequences.smiles_sequence import SmilesSequence
 from tests.commons import SequenceInfoTestType as Sit
 from tests.commons import TestDatasetFiles as Tdf
 
