@@ -1,8 +1,8 @@
 import torch.cuda
 from pytest import fixture
 
-from src.bio_dataset_manager.bio_dataloader import BioDataloader
-from src.bio_dataset_manager.bio_dataset import BioDataset
+from bio_dataset_manager.bio_dataloader import BioDataloader
+from bio_dataset_manager.bio_dataset import BioDataset
 
 
 @fixture

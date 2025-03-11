@@ -1,7 +1,7 @@
 import pytest
 from pytest import mark
 
-from src.bio_sequences.bio_sequences_config import DnaSequenceConfig, ProteinSequenceConfig, SmilesSequenceConfig
+from bio_sequences.bio_sequences_config import DnaSequenceConfig, ProteinSequenceConfig, SmilesSequenceConfig
 from tests.commons import SequenceInfoTestType as Sit
 from tests.commons import TestDatasetFiles as Tdf
 

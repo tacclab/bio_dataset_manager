@@ -1,7 +1,7 @@
 import pytest
 import torch
 
-from src.bio_commons import round_stat, safe_ratio, apply_mask
+from bio_commons import round_stat, safe_ratio, apply_mask
 
 
 class DummyModel(torch.nn.Module):
